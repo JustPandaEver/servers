@@ -1,9 +1,9 @@
 from flask import *
 from flask_accept import accept
 import os, requests as c,json
-with open("port.json") as cfg:
-     cfgd = json.load(cfg)
-port = (cfgd['port'])
+
+
+port = int(80)
 ip= c.get('https://icanhazip.com').text
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
